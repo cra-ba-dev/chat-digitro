@@ -1,0 +1,219 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  margin: 0px;
+  background-image: url(assets/cra-bg.png);
+}
+
+.div-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-form{
+  width: 7rem;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+/*Cards*/
+
+.cards{
+  padding: 5px;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.flex-item{
+  background-color: black;
+}
+
+.card1{
+  background-image: url("assets/chat-simples.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.card2{
+  background-image: url("assets/site.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.card3{
+  background-image: url("assets/servicos_online.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 22rem;
+  height: 19rem;
+  border: 2px solid #f1f1f1;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.banner {
+  padding: 10rem 0 6em;
+  text-align: center;
+  background: #f5f5f5;
+  height:100vh;
+}
+
+.banner .big-icon {
+  font-size: 14rem;
+  opacity: .18;
+}
+
+.banner h1 {
+  margin-bottom: 3rem;
+}
+
+.btn-float{
+  position:fixed;
+	width:70px;
+	height:70px;
+	bottom:40px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50%;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.btn {
+  background-color: white;
+  opacity: .8;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+}
+
+.btn:hover {
+  opacity: 1;
+
+}
+
+.btn1 {
+  padding: 6px 12px;
+}
+
+.btn2 {
+  margin-top: 10px;
+  padding: 2px 23px;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #0D83BF;
+  border-color: #119de4;
+}
+
+.btn-popup {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+}
+
+.hidden {
+  display : none;
+}
+
+.form {
+  background-color: gainsboro;
+  padding: 10px;
+  height: 100%;
+}
+
+table {
+  width:100%;
+  border-collapse: collapse;
+}
+
+.menu {
+  background-color: #0D83BF;
+  color: #fff;
+  font-weight: bold;
+  text-align: right;
+}
+
+.menu td:not(:first-child) {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.menu td:first-child {
+  width: 50%;
+}
+
+.menu td:not(:first-child):hover {
+  color: #fff;
+  background-color: RGBA(102, 102, 102, 0.74);
+}
+
+.inputText {
+  width: 205px;
+  height: 20px;  
+}
+
+.inputSelect{
+  width: 211px;
+  height: 26px;
+}
+
+.open {
+  opacity: 1;
+}
+

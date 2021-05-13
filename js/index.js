@@ -65,7 +65,7 @@ function exibirFormulario(){
   }
   else{
     divForm.className = 'form hidden';
-    formHeader.className = 'btn-float btn btn1 btn-danger fa fa-comments fa-4x';
+    formHeader.className = 'btn-float btn btn1 btn-danger fa fa-comments fa-3x';
     formHeader.innerHTML = '';
   }
 }

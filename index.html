@@ -1,48 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="index.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="index.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="js/index.js"></script>
+
+  <title>Portal CRA</title>
 </head>
 
-<header>
+<body>
+  <header>
     <nav>
       <img src="assets/CRABA.png" alt="" class="logo-img">
     </nav>
   </header>
 
-<body>
-	<section class="cards">
-	<div class="flex-container">
-		<div class="flip-card flex-item card1">
-			<a href="#" onclick="exibirFormulario()">
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="flip-card flex-item card2">
-			<a href="https://cra-ba.org.br/" target="_blank">
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-						
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="flip-card flex-item card3">
-			<a href="https://cra-ba.org.br/servicos-online-2/" target="_blank">
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-					</div>
-				</div>
-			</a>
-		</div>
-	</div>
-</section>
+  <section class="cards-site">
+    <div class="grid-container-site">
+
+
+      <div class="flip-card grid-item-site">
+        <a href="#" onclick="exibirFormulario()">
+          <div class="flip-card-inner">
+            <div class="flip-card-front chat">
+            </div>
+            <div class="flip-card-back">
+              <h1>Chat CRA</h1>
+              <p>Inicie o chat com um atendente do CRA</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="flip-card grid-item-site">
+        <a href="https://cra-ba.org.br/" target="_blank">
+          <div class="flip-card-inner">
+            <div class="flip-card-front site-craba">
+            </div>
+            <div class="flip-card-back">
+              <h1>Site do CRA-BA</h1>
+              <p>Acesse o site do CRA-BA</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="flip-card grid-item-site">
+        <a href="https://cra-ba.org.br/servicos-online-2/" target="_blank">
+          <div class="flip-card-inner">
+            <div class="flip-card-front servicos-online">
+            </div>
+            <div class="flip-card-back">
+              <h1>Serviços Online</h1>
+              <p>Acesse os Serviços Online</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--CHAT-->
+
   <div class="btn-popup">
     <a id="formHeader" class="btn-float btn btn1 btn-danger fa fa-comments fa-4x" onclick="exibirFormulario()"></a>
     <div id="divForm" class="form hidden">
@@ -51,109 +74,42 @@
         Para teste local: http://[[IP_CHATCLIENT]]/chatclient/chat.php
         Para acesso externo: http://[[IP_INTERNET]]/[[PATH_REDIRECIONAMENTO]]/chat.php
       -->
-			<div class="div-img">
-				<img src="assets/CRABA-cropped.png" alt="" class="logo-form">
-			</div>
-			
+      <div class="div-img">
+        <img src="assets/CRABA-cropped.png" alt="" class="logo-form">
+      </div>
+
       <form id="formulario" method="POST" action="http://192.168.1.195/chatclient/chat.php" onsubmit="return iniciar()">
         <table>
-          <tr><td>Nome:</td></tr>
-          <tr><td><input id="ci" name="ci" type="text" class="inputText" required/></td></tr>
-          <tr><td>Serviço</td></tr>
-          <tr><td>
-            <select id="servico" name="servico" class="inputSelect" required>
-              <option value=""></option>
-			  <option value="Atendimento">ATENDIMENTO</option>
-              <option value="ADMINISTRATIVO">ADMINISTRATIVO</option>
-              <option value="FINANCEIRO">FINANCEIRO</option>
-              <option value="FISCALIZAÇÃO">FISCALIZAÇÃO</option>
-              <option value="FORMAÇÃO_PROFISSIONAL">FORMAÇÃO_PROFISSIONAL</option>
-              <option value="JURÍDICO">JURÍDICO</option>
-              <option value="REGISTRO_E_CADASTRO">REGISTRO_E_CADASTRO</option>
-          </select>
-          </td></tr>
-          <tr><td align="center"><input type="submit" name="" value="Iniciar" class="btn btn2" /></td></tr>
+          <tr>
+            <td>Nome:</td>
+          </tr>
+          <tr>
+            <td><input id="ci" name="ci" type="text" class="inputText" required /></td>
+          </tr>
+          <tr>
+            <td>Serviço</td>
+          </tr>
+          <tr>
+            <td>
+              <select id="servico" name="servico" class="inputSelect" required>
+                <option value=""></option>
+                <option value="Atendimento">ATENDIMENTO</option>
+                <option value="ADMINISTRATIVO">ADMINISTRATIVO</option>
+                <option value="FINANCEIRO">FINANCEIRO</option>
+                <option value="FISCALIZAÇÃO">FISCALIZAÇÃO</option>
+                <option value="FORMAÇÃO_PROFISSIONAL">FORMAÇÃO_PROFISSIONAL</option>
+                <option value="JURÍDICO">JURÍDICO</option>
+                <option value="REGISTRO_E_CADASTRO">REGISTRO_E_CADASTRO</option>
+            </select>
+            </td>
+          </tr>
+          <tr>
+            <td align="center"><input type="submit" name="" value="Iniciar" class="btn btn2" /></td>
+          </tr>
         </table>
-
-
-<!--
-	*****************************************
-		Parâmetros opcionais
-	*****************************************
-
-	NOTIFICAÇÕES VISUAIS (TORRADA)
-	Parâmetro: notif
-	Descrição: Habilita a apresentação de alertas visuais (torrada) quando a interface não estiver em foco. São notificados o recebimento de nova mensagem, as ações relacionadas à transferência de arquivos e a finalização da chamada.
-	Exemplo:
-		<input id="notif" name="notif" value="1" hidden> 
-
-	NOTIFICAÇÕES SONORAS (BEEP)
-	Parâmetro: beep
-	Descrição: Habilita a apresentação de alertas sonoros quando a interface não estiver em foco. São notificados o recebimento de nova mensagem, as ações relacionadas à transferência de arquivos e a finalização da chamada.
-	Exemplo:
-		<input id="beep" name="beep" value="1" hidden>
-
-	MENSAGEM PERSONALIZADA DE ABERTURA
-	Parâmetro: mi
-	Descrição: Adiciona uma mensagem no início do histórico de mensagens assim que a chamada for atendida. Permite formatação básica, como &lt;b&gt;, &lt;i&gt;, &lt;u&gt;.
-	Exemplo:
-		<input id="mi" name="mi" value="Mensagem de abertura" hidden>
-
-	CSS PERSONALIZADO
-	Parâmetro: css
-	Descrição: Permite personalização parcial da interface através da criação de arquivo CSS.
-	Exemplo:
-		<input id="css" name="css" value="http://www.meuservidor.com.br/css/meuchat.css" hidden>
-
-	URL DE PÓS ATENDIMENTO
-	Parâmetro: url
-	Descrição: Endereço URL para o qual o navegador internet do usuário chat será redirecionado assim que a chamada for finalizada.
-	Exemplo:
-		<input id="url" name="url" value="http://www.meusite.com.br/posatendimento" hidden>
-
-	MODO DE ABERTURA DA URL
-	Parâmetro: urlmode
-	Descrição: Define se o endereço informado no parâmetro url será aberto na mesma janela, ou em uma nova. Por padrão, é aberta em uma nova janela, exceto quando aberto dentro de um frame.
-	Exemplo:
-		<input id="urlmode" name="urlmode" value="redir" hidden>
-		<input id="urlmode" name="urlmode" value="tab" hidden>
-
-	IDIOMA
-	Parâmetro: locale
-	Descrição: Define o idioma a ser utilizado na interface ChatClient. Se não for informado, será utilizado o idioma português. Esta configuração não altera a mensagem de espera cadastrada no Interact Manager.
-	Exemplo:
-		<input id="locale" name="locale" value="pt" hidden>
-		<input id="locale" name="locale" value="es" hidden>
-
-	PESQUISA DE SATISFAÇÃO
-	Parâmetro: ps
-	Descrição: Define que nesta chamada é desejado que a pesquisa de satisfação seja realizada. Para funcionamento, o serviço acessado deverá estar com configuração de pesquisa de satisfação habilitada, e configurado com frequência <i>"Aplicar apenas quando definido na abertura do chat"</i>. Nas demais formas de frequência este parâmetro não tem efeito.
-	Exemplo:
-		<input id="ps" name="ps" value="1" hidden>
-
-	DADOS ASSOCIADOS
-	Parâmetro: da
-	Descrição: Dados associados à chamada. Não é visível no ChatClient, somente no MultiAgent.
-	Exemplo:
-		<input id="da" name="da" value="Cliente com pendências financeiras." hidden>
-
-	E-MAIL DO USUÁRIO
-	Parâmetro: ea
-	Descrição: Endereço de e-mail para onde deve ser enviada a cópia da conversa de chat.
-	Exemplo:
-		<input id="ea" name="ea" value="email@servidor.com" hidden>
-
-	INFORMAÇÕES PERSONALIZADAS
-	Parâmetro: info
-	Descrição: Informações que serão incluídas no início do histórico de mensagens, tanto para o usuário chat quanto para o agente que está atendendo a chamada. As informações devem ser fornecidas no formato JSON, como uma lista ordenada de pares, nome e valor, atribuída como valor para o nome "c". Uma legenda pode ser adicionada fornecendo um texto como valor para o nome "t".
-	Exemplo:
-		<input id="info" name="info" value='{"t":"Texto da Legenda","c":[{"Codigo do Cliente":"12345"},{"Tipo do Cliente":"PF"},{"Estado Cartão":"Bloqueado"}]}' hidden>
-
--->
-
       </form>
     </div>
   </div>
 </body>
-</html>
 
+</html>

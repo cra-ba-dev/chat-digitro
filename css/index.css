@@ -129,43 +129,6 @@ nav{
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
-
-  .btn-float{
-  position:fixed;
-	width:90px;
-	height:90px;
-	bottom:40px;
-	right:30px;
-	background-color:#0C9;
-	color:#FFF;
-	border-radius:50%;
-	text-align:center;
-	box-shadow: 2px 2px 3px #999;
-}
-
-.btn {
-  background-color: white;
-  display: inline-block;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-}
-  
-
-
 }
 
 @media (min-width: 900px){
